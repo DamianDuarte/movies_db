@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas ordas por rating</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+<body>
+    <ul style="display: flex; gap: 10px; list-style: none;">
+        <li><a href="/movies">Películas</a></li>
+        <li><a href="/genres">Géneros</a></li>
+        <li><a href="/actors">Actores</a></li>
+    </ul>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1>PEÍCULAS ORDENADAS POR POSICIÓN</h1>
+    <ul>
+        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <li>
+            <a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %> </a> <br>
+            <%= 'RATING: ' + movies[i].rating %> 
+        </li>
+        <% } %>
+        
+    </ul>
+</body>
+</html>
