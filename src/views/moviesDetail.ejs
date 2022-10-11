@@ -22,6 +22,14 @@
     <p>AWARDS: <%= movie.awards %> </p>
     <p>LENGTH: <%= movie.length + ' min'%> </p>
     <p>RELEASE DATE: <%= movie.release_date %> </p>
-
+    <section>
+        <a class="button" style="color: black;" href="/movies/edit/<%= movie.id %>">Editar</a>
+        <a class="button" style="color: black;" href="/movies/delete/<%= movie.id %>">Borrar</a>
+    </section>
+    <br><br><hr><br><br>
+    <section>
+        <a class="button" style="color: black;" href="/movies/add">Agregar nueva película</a>
+        <a class="button" style="color: black;" href="/movies/">Ver listado de películas</a>
+    </section>
 </body>
 </html>
