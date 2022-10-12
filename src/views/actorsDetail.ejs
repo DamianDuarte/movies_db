@@ -21,6 +21,15 @@
     <br>
     <p>NAME: <%= actor.first_name + " " + actor.last_name %></p>
     <p>RATING: <%= actor.rating %> </p>
-
+    <br><br>
+    <section>
+        <a class="button" style="color: black;" href="/actors/edit/<%= actor.id %>">Editar</a>
+        <a class="button" style="color: black;" href="/actors/delete/<%= actor.id %>">Borrar</a>
+    </section>
+    <br><br><hr><br><br>
+    <section>
+        <a class="button" style="color: black;" href="/actors/add">Registrar nuevo actor</a>
+        <a class="button" style="color: black;" href="/actors/">Ver listado de actores</a>
+    </section>
 </body>
 </html>

@@ -11,11 +11,11 @@ module.exports =
     list: (req, res) => 
     {
         db.Movie.findAll()
-            .then((movies) =>
-            {
-                return res.render('moviesList', {movies})
-            })
-            .catch(err => console.log(err));
+        .then((movies) =>
+        {
+            return res.render('moviesList', {movies})
+        })
+        .catch(err => console.log(err));
     },
     new: (req, res) => 
     {
@@ -58,7 +58,7 @@ module.exports =
     create:  (req,res) => {
         db.Movie.create({
            ...req.body,
-           title: req.body.title,
+           title: req.body.title.trim(),
         })
         .then( newMovie => {
             res.redirect('/movies/detail/' + newMovie.id)

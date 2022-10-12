@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= actor.name %> </title>
+        <title><%= actors.first_name %> </title>
         <link rel='stylesheet' href='/css/style.css' />
     
     <body>
-        <%- include('./partials/header.ejs') %> 
-        
+        <ul style="display: flex; gap: 10px; list-style: none;">
+            <li><a href="/movies">Películas</a></li>
+            <li><a href="/genres">Géneros</a></li>
+            <li><a href="/actors">Actores</a></li>       
         <main>
             <h1 class="titulo">Agregar Actor</h1>
             <br>
@@ -20,12 +22,12 @@
                     <p><input type="text" name="last_name" id="" required></p>
                     <label for="rating">Rating </label>
                     <p><input type="number" name="rating" id="" required> </p>
-                    <label for="movieID">Favorite movie </label>
+                    <label for="actorID">Favorite actor </label>
                     <p>
-                        <select name="favorite_movie_id" id="">
-                            <option value="" disabled selected>- select movie -</option>
-                            <% movies.forEach(movie => { %>
-                             <option value="<%= movie.id %>"><%= movie.title %> </option>
+                        <select name="favorite_actors_id" id="">
+                            <option value="" disabled selected>- select actor -</option>
+                            <% actors.forEach(actor => { %>
+                             <option value="<%= actor.id %>"><%= actor.title %> </option>
                             <% }) %>
                         </select>
                     </p>

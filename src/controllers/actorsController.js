@@ -22,7 +22,7 @@ module.exports =
 
     add: function (req, res) {
         db.Movie.findAll({order:['title']})
-            .then(movies => res.render('actorsAdd', {movies}))
+            .then(actors => res.render('actorsAdd', {actors}))
             .catch(err => console.log(err));
     },
     create: function (req,res) {
